@@ -1,0 +1,19 @@
+body {
+    font:20px;
+    margin: 20px;
+    background-color: rgb(188, 212, 204);
+}
+
+.bgimg {
+    background-image: url("https://wallpapercave.com/w/wp2341968");
+    background-position: center;
+    background-size: cover;
+}
+
+#background-img {
+    position: absolute;
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.2;
+}
