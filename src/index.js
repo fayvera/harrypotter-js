@@ -1,11 +1,5 @@
-
-fetch("http://localhost:3000/questions")
-.then(resp => resp.json())
-.then(resp => console.log(resp))
-
-
-
-const startQuiz = document.getElementById("start-quiz")
+// fetchQuestion()
 const quizContainer = document.getElementById("quiz-container")
+const buttonQuiz = document.getElementById("start-quiz")
 
-
+buttonQuiz.addEventListener("click", fetchQuestions)
