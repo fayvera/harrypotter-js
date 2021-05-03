@@ -1,11 +1,10 @@
 body {
     font:20px;
     margin: 20px;
-    background-color: rgb(188, 212, 204);
+    background-image: "logo/forest.jpeg";
 }
 
 .bgimg {
-    /* background-image: url("https://wallpapercave.com/w/wp2341968"); */
     background-position: center;
     background-size: cover;
 }
@@ -16,4 +15,22 @@ body {
     background-position: center;
     background-size: cover;
     opacity: 0.2;
+}
+
+#question-container {
+    /* position: center; */
+    margin: auto;
+    padding: 60px;
+    width: 50%;
+    box-sizing: content-box;
+    box-shadow: black;
+    display: flex;
+}
+
+#single-question {
+    /* border: 2px black; */
+    position: center;
+    margin: auto;
+    /* padding: 20px; */
+    box-sizing: content-box;
 }
