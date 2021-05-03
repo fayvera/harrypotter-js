@@ -4,6 +4,9 @@ class Question{
     }
 
 }
+let allQuestions = []
+const questionsDiv = document.getElementById("question-container")
+
 function fetchQuestions(){
     fetch("http://localhost:3000/questions")
     .then(resp => resp.json())
@@ -11,13 +14,14 @@ function fetchQuestions(){
 }
 
 function appendQuestions(questions){
-    const questionsDiv = document.getElementById("question-container")
-    for (let q of questions){
+    allQuestions = questions
+    // let currentQuestion = allQuestions
+    let counter = 0
+    const q = allQuestions[counter++]
+        
         const div = document.createElement("div")
         div.setAttribute('id', 'single-question')
         div.innerText = q.title
         questionsDiv.append(div)
-        // debugger
         appendOptions(q.options, div)
-    }
 }

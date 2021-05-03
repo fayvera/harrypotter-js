@@ -1,28 +1,28 @@
+
+
 function appendOptions(options, element){
     const ul = document.createElement("ul")
     element.append(ul)
     for (let option of options){
-        // debugger
-        const opt = document.createElement("option")
+        let opt = document.createElement("option")
         opt.innerText = option.content
-        ul.append(opt) 
-        getElement()
-    }
+        opt.addEventListener("click", nextQuestion)
+        ul.append(opt)
+    }    
 }
 
-function getElement(){
-    const element = document.getElementsByTagName("option")
-    for (let e of element){
-        console.log(e)
-        // debugger
-        selectOption(e)
-    }
-}
 
-function selectOption(arg){
-    const select = arg.addEventListener("click", function(e){
-        console.log(e)
-        // arg.addEventListener("change")
-        // debugger 
-    })
+function nextQuestion(e){
+    const questionDiv = document.getElementById('single-question')
+    // Only want to appear after a selection was made
+    const next = document.createElement('button')
+    next.innerText = "Next"
+    debugger
+    questionDiv.append(next)
+
+    if (e.target.value === true){
+
+        // next.addEventListener('click', nextQuestion)
+    }
+    
 }
