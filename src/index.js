@@ -4,4 +4,4 @@ const buttonQuiz = document.getElementById("start-quiz")
 const backgroundImg = document.body.style.backgroundImage = "logo/forest.jpeg";
 
 
-buttonQuiz.addEventListener("click", fetchQuestions)
+buttonQuiz.addEventListener("click", Question.fetchQuestions)
