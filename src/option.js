@@ -6,6 +6,7 @@ class Option {
         this.houseId = option.house_id
         this.questionId = option.question_id
     }
+
     
 }
 
@@ -16,7 +17,7 @@ function appendOptions(options, element){
     for (let option of options){
         let opt = document.createElement("option")
         opt.innerText = option.content
-        opt.setAttribute('id', option.house_id.toString())
+        opt.id = option.houseId.toString()
 
         opt.addEventListener("click", nextQuestion)
         ul.append(opt)
