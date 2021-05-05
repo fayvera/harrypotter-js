@@ -1,13 +1,17 @@
 body {
     font:20px;
     margin: 20px;
-    /* background-image: url("logo/forest.jpeg"); */
+    -webkit-text-fill-color: black;
+    background-image: url("logo/forest.jpeg");
     font-family: 'Lucida Sans';
 }
 
-.bgimg {
+.bgimg-page-wrapper{
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #background-img {
@@ -20,38 +24,70 @@ body {
 }
 
 #question-container {
-    /* position: center; */
+    position: inherit;
     margin: auto;
-    padding: 60px;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
     width: 50%;
     box-sizing: content-box;
     box-shadow: black;
-    display: flex;
+    /* display: flex; */
+    /* background-color: lavenderblush; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: center;
+
+}
+
+#user-name {
+    position: center;
+    width: 410px;
+    height: 40px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    font-family: "Sacramento";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    background-color: rgba(0, 79, 82, 0.679);
 
 }
 
 #single-question {
     /* border: 2px black; */
-    position: center;
+    position: inherit;
     margin: auto;
-    /* padding: 20px; */
+    padding: 20px;
     box-sizing: content-box;
+    border:lavenderblush;
+    background-color: rgb(82, 137, 82);
+    border-radius: 6px;
+    opacity: 0.8;
 }
 
 #quiz-container {
-    position: absolute;
+    position: inherit;
+    padding: 70px 0;
+    /* position: absolute; */
     margin: auto;
     top: 50%;
     left: 0;
     right: 0;
     bottom: 50%;
-    width: 200px;
-    height: 200px;
+    width: 410px;
+    height: 400px;
 }
 
 #start-quiz {
-    /* padding: 60;
-    position: center; */
+    padding: 60;
+    position: inherit;
+    left: 0;
+    right: 0;
     width: 171px;
     height: 65px;
     background: hsl(173, 94%, 12%);
@@ -60,14 +96,20 @@ body {
     z-index: 3;
     border: 2px solid;
     transition: all 1s ease-in-out;
-    border-image: linear-gradient(#0c4607, rgb(63, 126, 1)) 30;
+    border-image: linear-gradient(#0c4607, rgba(11, 21, 1, 0.378)) 30;
     box-shadow: 0px 0px 36px #1366bf;
-    transition: all 1s ease-in-out;
+    transition: all 2s ease-in-out;
     
     font-family: "Sacramento", cursive;
     text-align: center;
     font-size: 35px;
     -webkit-text-fill-color: white;
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: center;
+    cursor: pointer;
     
 }
 
@@ -88,5 +130,21 @@ background: -webkit-linear-gradient(#ffdc2a, #fb2182);
     border: 2px solid;
     margin: auto;
     position: center;
+    
+}
+
+div h2 {
+    padding: 5px;
+    font-size: 45px;
+    margin: auto;
+    font-family: "Sacramento", cursive;
+}
+
+option {
+    padding: 10px;
+    font-size: 25px;
+    font-family: "Sacramento", cursive;
+    /* background-color: lightgrey; */
+
     
 }

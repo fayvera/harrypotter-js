@@ -1,4 +1,5 @@
-const questionsDiv = document.getElementById("question-container")
+const questionsDiv = document.getElementById("quiz-container")
+let div = document.getElementById("single-question")
 
 class Question{
     constructor(question){
@@ -18,31 +19,37 @@ class Question{
         const q = Question.allQuestions[Question.counter++]
         q.appendQuestion()
     };
-
+    
     appendQuestion(){
-        const div = document.createElement("div")
-        div.setAttribute('id', 'single-question')
-        div.innerText = this.title
+        
+        if (!div){
+            div = document.createElement("div")
+            div.setAttribute('id', 'single-question')
+        }
+        const h2 = document.createElement('h2')
+        h2.innerText = this.title
+        div.append(h2)
         questionsDiv.append(div)
-        appendOptions(this.options, div)
+        this.appendOptions(div)
     };
 
-    // appendOptions(options, div){
-    //     const ul = document.createElement("ul")
-    //     div.append(ul)
-    //     debugger
-    //     for (let option of options){
-    //         let opt = document.createElement("option")
-    //         opt.innerText = option.content
-    //         opt.id = option.houseId.toString()
+    appendOptions(div){
+        const ul = document.createElement("ul")
+        div.append(ul)
+        for (let option of this.options){
+            let opt = document.createElement("option")
+            opt.innerText = option.content
+            opt.id = option.houseId.toString()
     
-    //         opt.addEventListener("click", nextQuestion)
-    //         ul.append(opt)
-    //     }
-    // }
+            opt.addEventListener("click", Option.nextQuestion)
+            ul.append(opt)
+        }
+    }
+
 
     static fetchQuestions(){
-        this.remove()
+        username.remove()
+        buttonQuiz.remove()
         fetch("http://localhost:3000/questions")
         .then(resp => resp.json())
         .then(Question.createQuestions)
