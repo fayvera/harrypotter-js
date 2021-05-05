@@ -21,7 +21,7 @@ class Question{
     };
     
     appendQuestion(){
-        
+        debugger
         if (!div){
             div = document.createElement("div")
             div.setAttribute('id', 'single-question')
@@ -40,7 +40,6 @@ class Question{
             let opt = document.createElement("option")
             opt.innerText = option.content
             opt.id = option.houseId.toString()
-    
             opt.addEventListener("click", Option.nextQuestion)
             ul.append(opt)
         }
