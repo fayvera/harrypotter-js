@@ -1,4 +1,5 @@
 
+
 class Option {
     constructor(option){
         this.content = option.content
@@ -8,23 +9,25 @@ class Option {
     }
     static currentSelection = 0;
 
-
     static nextQuestion(e){
-       if (Question.counter == Question.allQuestions.length){
-            const submit = document.createElement('button')
-            submit.id = "submit"
-            submit.innerText = "Submit"
-            div.append(submit)
-       } else {
+    //     let btnQuest = document.createElement('button')
+    //    if (Question.counter = Question.allQuestions.length){
+    //         btnQuest.id = "submit"
+    //         btnQuest.innerText = "Submit"
+    //         div.append(btnQuest)
+    //         // submit.id = "submit"
+    //         // submit.innerText = "Submit"
+    //         // div.append(submit)
+    //         // submit.addEventListener('click', Option.sendData)
+    //     } else {
             if(!document.getElementById('next')){
-            const next = document.createElement('button')
-            next.id = "next"
-            next.innerText = "Next"
-            div.append(next)
-            }
-        }
-            Option.currentSelection = e.target.id 
-            next.addEventListener('click', Option.sendData)
+                const next = document.createElement('button')
+                next.id = "next"
+                next.innerText = "Next"
+                div.append(next)
+            }  
+        next.addEventListener('click', Option.sendData)
+        Option.currentSelection = e.target.id 
     }
 
     static sendData(){
@@ -41,7 +44,6 @@ class Option {
         div.innerHTML = ""
         const q = Question.allQuestions[Question.counter++]
         q.appendQuestion()
-        debugger
     }
     
 }

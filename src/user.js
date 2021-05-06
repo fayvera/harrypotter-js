@@ -31,7 +31,6 @@ class User {
     
 
     postFetch(data){
-        // debugger
         fetch(`http://localhost:3000/users/${this.id}/selected_answers`, {
             method: "POST",
             headers: {
@@ -47,5 +46,11 @@ class User {
         .catch((error) => {
             console.error('Error:', error);
         });
+    }
+
+    static sorting(){
+        fetch(`http://localhost:3000/users/${this.id}`)
+        .then(resp => resp.json())
+        .then(console.log)
     }
 }
