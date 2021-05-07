@@ -20,17 +20,18 @@ class Option {
     //         // div.append(submit)
     //         // submit.addEventListener('click', Option.sendData)
     //     } else {
+        // debugger
             if(!document.getElementById('next')){
                 const next = document.createElement('button')
                 next.id = "next"
                 next.innerText = "Next"
                 div.append(next)
             }  
-        next.addEventListener('click', Option.sendData)
+        next.addEventListener('click', Option.sortData)
         Option.currentSelection = e.target.id 
     }
 
-    static sendData(){
+    static sortData(){
         if (Option.currentSelection === "1"){
             House.gryffindor += 1
         } else if (Option.currentSelection === "2"){
@@ -40,10 +41,34 @@ class Option {
         } else {
             House.hufflepuff +=1
         }
+        debugger
+        
+
+
+        Option.sendData()
+
+    }
+
+    static sendData(){
         User.currentUser.postFetch(Option.currentSelection)
         div.innerHTML = ""
         const q = Question.allQuestions[Question.counter++]
-        q.appendQuestion()
+// 
+        if (q.id === 11){
+            Question.checkForEnd()
+            // debugger
+            // submit button instead of "next"
+        } else if (q.id === 15) {
+            debugger
+            House.checkTies()
+            // keep playing until there is a tiebreaker or end of questions
+            // add 4 more questions and check for tie again
+            // if there is a tie, append last question with only the options for tied houses        
+        } else {
+            q.appendQuestion()
+        }
+
+
     }
     
 }

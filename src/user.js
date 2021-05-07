@@ -1,6 +1,5 @@
 class User {
     constructor(user){
-        // debugger
         this.name = user.name
         this.id = user.id
         User.currentUser = this 
@@ -48,7 +47,7 @@ class User {
         });
     }
 
-    static sorting(){
+    static getSorting(){
         fetch(`http://localhost:3000/users/${this.id}`)
         .then(resp => resp.json())
         .then(console.log)

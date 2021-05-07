@@ -29,23 +29,32 @@ class Question{
         h2.innerText = this.title
         div.append(h2)
         questionsDiv.append(div)
+        // debugger
+        // if(this.id === 10){
+        //     this.checkForEnd()
+        // } else if (this.id === 14){
+        //     debugger
+        //     House.checkTies
+        //                // debugger
+        //     // keep playing until there is a tiebreaker or end of questions
+        //     // add 4 more questions and check for tie again
+        //     // if there is a tie, append last question with only the options for tied houses
+        // }
         this.appendOptions(div)
     };
-    // end with 10 questions
 
-    checkForEnd(){
-        if(Question.allQuestions[Question.counter] == 10) {
-            // check if one house has 5 or more
-            if (House.gryffindor >= 5 || House.slytherin >=5 || House.ravenclaw >= 5 || House.hufflepuff >= 5){
-                // end game and sort percentage
-                // call fetch 
-                // call function to submit 
-            }
+    static checkForEnd(){
+        if (House.gryffindor >= 5 || House.slytherin >=5 || House.ravenclaw >= 5 || House.hufflepuff >= 5){
+            debugger
+            // end game and sort percentage
+            // call fetch 
+            // call function to submit 
         } else {
-            // keep playing until there is a tiebreaker or end of questions
-            // add 4 more questions and check for tie again
-            // if there is a tie, append last question with only the options for tied houses
+            debugger
+            // keep playing 
+            this.appendQuestion()
         }
+
     };
  
     defineEnd(){
