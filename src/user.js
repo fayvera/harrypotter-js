@@ -48,6 +48,7 @@ class User {
     }
 
     static getSorting(){
+        debugger
         fetch(`http://localhost:3000/users/${this.id}`)
         .then(resp => resp.json())
         .then(console.log)

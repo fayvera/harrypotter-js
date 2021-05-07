@@ -10,16 +10,13 @@ class Option {
     static currentSelection = 0;
 
     static nextQuestion(e){
-    //     let btnQuest = document.createElement('button')
-    //    if (Question.counter = Question.allQuestions.length){
-    //         btnQuest.id = "submit"
-    //         btnQuest.innerText = "Submit"
-    //         div.append(btnQuest)
-    //         // submit.id = "submit"
-    //         // submit.innerText = "Submit"
-    //         // div.append(submit)
-    //         // submit.addEventListener('click', Option.sendData)
-    //     } else {
+        if (Question.counter >= 10){
+           const submit = document.createElement('button')
+            submit.id = "submit"
+            submit.innerText = "Submit"
+            div.append(submit)
+            submit.addEventListener('click', Option.sortData)
+        } else {
         // debugger
             if(!document.getElementById('next')){
                 const next = document.createElement('button')
@@ -29,6 +26,7 @@ class Option {
             }  
         next.addEventListener('click', Option.sortData)
         Option.currentSelection = e.target.id 
+        }
     }
 
     static sortData(){
@@ -41,19 +39,16 @@ class Option {
         } else {
             House.hufflepuff +=1
         }
-        debugger
-        
-
 
         Option.sendData()
-
     }
 
     static sendData(){
         User.currentUser.postFetch(Option.currentSelection)
         div.innerHTML = ""
         const q = Question.allQuestions[Question.counter++]
-// 
+       
+        debugger
         if (q.id === 11){
             Question.checkForEnd()
             // debugger

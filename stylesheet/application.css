@@ -1,11 +1,11 @@
 body {
     font:20px;
-    margin: 20px;
+    /* margin: 20px; */
     -webkit-text-fill-color: black;
     background-image: url("logo/forest.jpeg");
     font-family: 'Lucida Sans';
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
 }
 
 .bgimg-page-wrapper{
@@ -70,7 +70,8 @@ body {
     padding: 30px;
     box-sizing: content-box;
     border:lavenderblush;
-    background-color: rgb(82, 137, 82);
+    /* background-color: rgb(82, 137, 82); */
+    background-color: rgb(15 152 146);
     border-radius: 6px;
     opacity: 0.8;
     margin-top: 100px;
@@ -125,7 +126,7 @@ transition: all 0.3s ease-in-out;
 background: -webkit-linear-gradient(#ffdc2a, #fb2182);
 -webkit-background-clip: text; */
 
-#next {
+#next, #submit {
     width: 100px;
     height: 35px;
     background: hsl(174, 32%, 63%);
@@ -146,13 +147,27 @@ div h2 {
     font-size: 45px;
     margin: auto;
     font-family: "Sacramento", cursive;
+    text-align: center;
 }
 
 option {
-    padding: 10px;
+    padding: 7px;
     font-size: 25px;
     font-family: "Sacramento", cursive;
-    /* background-color: lightgrey; */
+    text-align: center;
+    margin: 20px;
+    background-color: #bac;
+}
+option:hover {
+    background-color: rgb(76, 8, 143);
+    opacity: 1;
+}
+option:after {
+    background-color: yellow;
+}
 
-    
+ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }

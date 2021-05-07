@@ -44,17 +44,34 @@ class Question{
     };
 
     static checkForEnd(){
-        if (House.gryffindor >= 5 || House.slytherin >=5 || House.ravenclaw >= 5 || House.hufflepuff >= 5){
-            debugger
-            // end game and sort percentage
-            // call fetch 
-            // call function to submit 
-        } else {
-            debugger
-            // keep playing 
-            this.appendQuestion()
-        }
+        // debugger
+        // if (Question.allQuestions[Question.counter].id === 10){
 
+            if (House.gryffindor >= 5 || House.slytherin >=5 || House.ravenclaw >= 5 || House.hufflepuff >= 5){
+                debugger
+                User.getSorting()
+                // end game and sort percentage
+                // call fetch 
+                // call function to submit 
+            // } else if (House.checkTies) {    
+            //     // keep playing 
+            //     const alertMess = document.createElement('h3')
+            //     alertMess.innerText = "Oh wow! You have a tie! Let's keep going!"
+
+            //     this.appendQuestion()
+            } else {
+                debugger
+                House.checkTies()
+                // end of the game
+            }
+            
+        // } else if (Question.allQuestions[Question.counter].id  === 14){
+        //     // check tie
+        // } else {
+
+            // Option.nextQuestion()
+
+        // }
     };
  
     defineEnd(){
