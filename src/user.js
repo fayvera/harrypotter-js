@@ -53,4 +53,8 @@ class User {
         .then(resp => resp.json())
         .then(console.log)
     }
+
+    static declareWinner(){
+        // show house sorting for user and all previous users
+    }
 }

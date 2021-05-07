@@ -11,13 +11,14 @@ class Option {
 
     static nextQuestion(e){
         if (Question.counter >= 10){
-           const submit = document.createElement('button')
-            submit.id = "submit"
-            submit.innerText = "Submit"
-            div.append(submit)
-            submit.addEventListener('click', Option.sortData)
+            if(!document.getElementById('submit')){
+                const submit = document.createElement('button')
+                submit.id = "submit"
+                submit.innerText = "Submit"
+                div.append(submit)
+                submit.addEventListener('click', Option.sortData)
+            }        
         } else {
-        // debugger
             if(!document.getElementById('next')){
                 const next = document.createElement('button')
                 next.id = "next"
@@ -48,17 +49,8 @@ class Option {
         div.innerHTML = ""
         const q = Question.allQuestions[Question.counter++]
        
-        debugger
-        if (q.id === 11){
+        if (q.id >= 11){
             Question.checkForEnd()
-            // debugger
-            // submit button instead of "next"
-        } else if (q.id === 15) {
-            debugger
-            House.checkTies()
-            // keep playing until there is a tiebreaker or end of questions
-            // add 4 more questions and check for tie again
-            // if there is a tie, append last question with only the options for tied houses        
         } else {
             q.appendQuestion()
         }

@@ -29,49 +29,18 @@ class Question{
         h2.innerText = this.title
         div.append(h2)
         questionsDiv.append(div)
-        // debugger
-        // if(this.id === 10){
-        //     this.checkForEnd()
-        // } else if (this.id === 14){
-        //     debugger
-        //     House.checkTies
-        //                // debugger
-        //     // keep playing until there is a tiebreaker or end of questions
-        //     // add 4 more questions and check for tie again
-        //     // if there is a tie, append last question with only the options for tied houses
-        // }
         this.appendOptions(div)
     };
 
     static checkForEnd(){
-        // debugger
-        // if (Question.allQuestions[Question.counter].id === 10){
-
             if (House.gryffindor >= 5 || House.slytherin >=5 || House.ravenclaw >= 5 || House.hufflepuff >= 5){
                 debugger
                 User.getSorting()
-                // end game and sort percentage
-                // call fetch 
-                // call function to submit 
-            // } else if (House.checkTies) {    
-            //     // keep playing 
-            //     const alertMess = document.createElement('h3')
-            //     alertMess.innerText = "Oh wow! You have a tie! Let's keep going!"
-
-            //     this.appendQuestion()
             } else {
                 debugger
                 House.checkTies()
-                // end of the game
+                // check if there is winner or tie
             }
-            
-        // } else if (Question.allQuestions[Question.counter].id  === 14){
-        //     // check tie
-        // } else {
-
-            // Option.nextQuestion()
-
-        // }
     };
  
     defineEnd(){
