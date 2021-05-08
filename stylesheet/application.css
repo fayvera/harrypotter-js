@@ -96,7 +96,7 @@ body {
     bottom: 50%;
     width: 171px;
     height: 65px;
-    background: hsl(173, 94%, 12%);
+    background: #023b35;
     box-shadow: 0px 0px 16px #3a7dbb;
     border-radius: 2px;
     z-index: 3;
@@ -117,6 +117,11 @@ body {
     align-items: center;
     cursor: pointer;
     
+}
+
+#final-page {
+    position: fixed;
+    background: #629d97;
 }
 
 /* left: 56px;
@@ -142,7 +147,7 @@ background: -webkit-linear-gradient(#ffdc2a, #fb2182);
     display: flex;
 }
 
-div h2 {
+div h2{
     padding: 5px;
     font-size: 45px;
     margin: auto;
@@ -170,4 +175,13 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 0;
+}
+
+h3 {
+    padding: 5px;
+    font-size: 45px;
+    margin: auto;
+    font-family: "Sacramento", cursive;
+    text-align: center;
+    background-color: lightgrey;
 }

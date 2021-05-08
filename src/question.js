@@ -1,6 +1,7 @@
 const questionsDiv = document.getElementById("quiz-container")
 let div = document.getElementById("single-question")
 
+
 class Question{
     constructor(question){
         Question.allQuestions.push(this)
@@ -34,19 +35,11 @@ class Question{
 
     static checkForEnd(){
             if (House.gryffindor >= 5 || House.slytherin >=5 || House.ravenclaw >= 5 || House.hufflepuff >= 5){
-                debugger
                 User.getSorting()
             } else {
-                debugger
                 House.checkTies()
-                // check if there is winner or tie
             }
     };
- 
-    defineEnd(){
-        // fetch results from database
-        User.sorting()
-    }
 
     appendOptions(div){
         const ul = document.createElement("ul")

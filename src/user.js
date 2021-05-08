@@ -1,3 +1,4 @@
+const alertMess = document.getElementById("alert-tie")
 class User {
     constructor(user){
         this.name = user.name
@@ -16,7 +17,7 @@ class User {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(newUser)
+            body: JSON.stringify({name: newUser})
         })
         .then(resp => resp.json())
         .then(r => {
@@ -40,7 +41,7 @@ class User {
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data);
+            console.log('Success');
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -48,13 +49,32 @@ class User {
     }
 
     static getSorting(){
-        debugger
         fetch(`http://localhost:3000/users/${this.id}`)
         .then(resp => resp.json())
-        .then(console.log)
+        .then(this.declareWinner)
     }
 
-    static declareWinner(){
+    static declareWinner(data){
         // show house sorting for user and all previous users
+        alertMess.remove()
+        div.remove()
+        const newDiv = document.createElement("div")
+        newDiv.id = "final-page"
+        quizContainer.append(newDiv)
+        const declare = document.createElement("h2")
+        declare.innerText = `Here is your sorting, ${data.name}`
+        
+        const ul = document.createElement("ul")
+        
+        newDiv.append(declare, ul)
+        
+        for (let value in data.housing){
+            const li = document.createElement("li")
+            li.innerText = `${value}: ${data.housing[value]}%`
+            ul.append(li)
+        }
+        
+        debugger
+        // play again ?
     }
 }
