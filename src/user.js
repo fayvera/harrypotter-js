@@ -83,9 +83,13 @@ class User {
         const pgWrapper = document.getElementById("pgwrapper")
         pgWrapper.append(home)
         home.addEventListener('click', function(){
+            House.clearSelections()
+            Question.clearQuestions()
+            User.currentUser = {}
             document.getElementById('final-page').remove()
             home.remove()
             pgWrapper.append(username, buttonQuiz)
+            debugger
         })
     }
 }

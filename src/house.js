@@ -26,5 +26,11 @@ class House {
             User.getSorting()
         }
     }
+    static clearSelections(){
+        House.gryffindor = 0;
+        House.slytherin = 0;
+        House.ravenclaw = 0;
+        House.hufflepuff = 0;
+    }
 
-}2
+}

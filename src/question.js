@@ -66,6 +66,11 @@ class Question{
         .then(Question.createQuestions)
     }
 
+    static clearQuestions(){
+        Question.allQuestions = []
+        Question.counter = 0
+    }
+
 }
 
 
