@@ -22,6 +22,9 @@ class Question{
     };
     
     appendQuestion(){
+        if (!!alertMess){
+            alertMess.remove()
+        }
         if (!div){
             div = document.createElement("div")
             div.setAttribute('id', 'single-question')
@@ -31,14 +34,6 @@ class Question{
         div.append(h2)
         questionsDiv.append(div)
         this.appendOptions(div)
-    };
-
-    static checkForEnd(){
-            if (House.gryffindor >= 5 || House.slytherin >=5 || House.ravenclaw >= 5 || House.hufflepuff >= 5){
-                User.getSorting()
-            } else {
-                House.checkTies()
-            }
     };
 
     appendOptions(div){

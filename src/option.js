@@ -26,8 +26,9 @@ class Option {
                 div.append(next)
             }  
         next.addEventListener('click', Option.sortData)
+        debugger
+    }
         Option.currentSelection = e.target.id 
-        }
     }
 
     static sortData(){
@@ -40,7 +41,7 @@ class Option {
         } else {
             House.hufflepuff +=1
         }
-
+        debugger
         Option.sendData()
     }
 
@@ -50,7 +51,7 @@ class Option {
         const q = Question.allQuestions[Question.counter++]
        
         if (q.id >= 11){
-            Question.checkForEnd()
+            House.checkTies()
         } else {
             q.appendQuestion()
         }

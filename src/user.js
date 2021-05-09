@@ -4,7 +4,6 @@ class User {
         this.name = user.name
         this.id = user.id
         User.currentUser = this 
-
     }
 
     static currentUser = ''
@@ -56,7 +55,10 @@ class User {
 
     static declareWinner(data){
         // show house sorting for user and all previous users
-        alertMess.remove()
+        const alertMess = document.getElementById('alert-tie')
+        if (!!alertMess){
+            alertMess.remove()
+        }
         div.remove()
         const newDiv = document.createElement("div")
         newDiv.id = "final-page"
@@ -73,7 +75,6 @@ class User {
             li.innerText = `${value}: ${data.housing[value]}%`
             ul.append(li)
         }
-        
         debugger
         // play again ?
     }

@@ -120,7 +120,7 @@ body {
 }
 
 #final-page {
-    position: fixed;
+    /* position: fixed; */
     background: #629d97;
 }
 
@@ -175,6 +175,11 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 0;
+    list-style-type: none;
+    text-align: center;
+    font-family: "Sacramento", cursive;
+    font-size: 45px;
+
 }
 
 h3 {
