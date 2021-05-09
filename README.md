@@ -11,8 +11,8 @@ You can install this application by running
 git clone https://github.com/fayvera/harrypotter-js.git
 ``` 
 You will also need to install the Rails API this application needs.
-To do so, you can run 
-```https://github.com/fayvera/js-project-api.git``` and follow the installation instructions.
+To do so, you can navigate to
+```https://github.com/fayvera/js-project-api``` in your browser and follow the installation instructions.
 
 
 After that you will need to start the server by running ```rails s```
