@@ -1,24 +1,27 @@
 # Hogwarts Sorting Quiz
 
-Foobar is a Python library for dealing with word pluralization.
+Welcome to the Hogwarts Sorting Quiz! With this application you can feel like you are part of the Wizarding World of Harry Potter and find out what Hogwarts House you would belong in. 
+
+
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
+You can install this application by running 
 ```bash
-pip install foobar
-```
+git clone https://github.com/fayvera/harrypotter-js.git
+``` 
+You will also need to install the Rails API this application needs.
+To do so, you can run 
+```https://github.com/fayvera/js-project-api.git``` and follow the installation instructions.
+
+
+After that you will need to start the server by running ```rails s```
 
 ## Usage
 
-```python
-import foobar
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+Returning to this directory, you can open this application by typing ```open index.html``` in your terminal. This should open it in your browser.
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
