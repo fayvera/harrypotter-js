@@ -54,7 +54,6 @@ class User {
     }
 
     static declareWinner(data){
-        // show house sorting for user and all previous users
         const alertMess = document.getElementById('alert-tie')
         if (!!alertMess){
             alertMess.remove()
@@ -65,9 +64,7 @@ class User {
         quizContainer.append(newDiv)
         const declare = document.createElement("h2")
         declare.innerText = `Here is your sorting, ${data.name}`
-        
         const ul = document.createElement("ul")
-        
         newDiv.append(declare, ul)
         
         for (let value in data.housing){
@@ -75,7 +72,20 @@ class User {
             li.innerText = `${value}: ${data.housing[value]}%`
             ul.append(li)
         }
-        debugger
-        // play again ?
+        User.playAgain()
+    }
+
+
+    static playAgain(){
+        const home = document.createElement("button")
+        home.id = "play-again"
+        home.innerText = "Play again?"
+        const pgWrapper = document.getElementById("pgwrapper")
+        pgWrapper.append(home)
+        home.addEventListener('click', function(){
+            document.getElementById('final-page').remove()
+            home.remove()
+            pgWrapper.append(username, buttonQuiz)
+        })
     }
 }

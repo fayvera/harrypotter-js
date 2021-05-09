@@ -26,7 +26,6 @@ class Option {
                 div.append(next)
             }  
         next.addEventListener('click', Option.sortData)
-        debugger
     }
         Option.currentSelection = e.target.id 
     }
@@ -41,7 +40,6 @@ class Option {
         } else {
             House.hufflepuff +=1
         }
-        debugger
         Option.sendData()
     }
 
