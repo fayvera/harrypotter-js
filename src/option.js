@@ -46,16 +46,18 @@ class Option {
     }
 
     static sendData(){
-        User.currentUser.postFetch(Option.currentSelection)
-        div.innerHTML = ""
-        const q = Question.allQuestions[Question.counter++]
-       
-        if (q.id >= 11){
-            // debugger
-            House.checkTies()
-        } else {
-            q.appendQuestion()
-        }
+        User.currentUser.postFetch(Option.currentSelection).then(resp => {
+            div.innerHTML = ""
+            const q = Question.allQuestions[Question.counter++]
+           
+            if (q.id >= 11){
+                // debugger
+                House.checkTies()
+            } else {
+                q.appendQuestion()
+            }
+
+        })
 
 
     }

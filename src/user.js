@@ -30,7 +30,7 @@ class User {
     
 
     postFetch(data){
-        fetch(`http://localhost:3000/users/${this.id}/selected_answers`, {
+        return fetch(`http://localhost:3000/users/${this.id}/selected_answers`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ class User {
         declare.innerText = `Here is your sorting, ${data.name}`
         const ul = document.createElement("ul")
         newDiv.append(declare, ul)
-        
+        debugger
         for (let value in data.housing){
             const li = document.createElement("li")
             li.innerText = `${value}: ${data.housing[value]}%`
