@@ -17,7 +17,6 @@ class Option {
                 submit.innerText = "Submit"
                 div.append(submit)
                 submit.addEventListener('click', Option.sortData)
-                // debugger
             }        
         } else {
             if(!document.getElementById('next')){
@@ -41,7 +40,6 @@ class Option {
         } else {
             House.hufflepuff +=1
         }
-        // debugger
         Option.sendData()
     }
 
@@ -51,7 +49,6 @@ class Option {
             const q = Question.allQuestions[Question.counter++]
            
             if (q.id >= 11){
-                // debugger
                 House.checkTies()
             } else {
                 q.appendQuestion()

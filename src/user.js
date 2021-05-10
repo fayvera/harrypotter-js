@@ -66,7 +66,6 @@ class User {
         declare.innerText = `Here is your sorting, ${data.name}`
         const ul = document.createElement("ul")
         newDiv.append(declare, ul)
-        debugger
         for (let value in data.housing){
             const li = document.createElement("li")
             li.innerText = `${value}: ${data.housing[value]}%`
@@ -89,7 +88,7 @@ class User {
             document.getElementById('final-page').remove()
             home.remove()
             pgWrapper.append(username, buttonQuiz)
-            debugger
+            
         })
     }
 }
