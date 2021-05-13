@@ -21,7 +21,11 @@ class House {
                 questionsDiv.append(alertMess)
             }
             const q = Question.allQuestions[Question.counter]
+            if (q.id === 15){
+                q.options = q.options.filter((x) => 5 == sumHouse[x.houseId - 1])
+            } 
             q.appendQuestion()
+            
         } else {
             User.getSorting()
         }
