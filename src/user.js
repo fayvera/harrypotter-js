@@ -47,10 +47,10 @@ class User {
         });
     }
 
-    static getSorting(){
+    getSorting(){
         fetch(`http://localhost:3000/users/${this.id}`)
         .then(resp => resp.json())
-        .then(this.declareWinner)
+        .then(User.declareWinner)
     }
 
     static declareWinner(data){

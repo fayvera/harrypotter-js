@@ -27,9 +27,11 @@ class House {
             q.appendQuestion()
             
         } else {
-            User.getSorting()
+            debugger
+            User.currentUser.getSorting()
         }
     }
+
     static clearSelections(){
         House.gryffindor = 0;
         House.slytherin = 0;
